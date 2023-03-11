@@ -39,7 +39,11 @@ header{
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     border-radius: 50px;
-    box-shadow: lightgrey 0px 0px 13px;
+    box-shadow: lightgrey 0 0 5px;
+    cursor: pointer;
+}
+.header--btn:hover{
+    box-shadow: lightgray 0 0 10px;
 }
 main{
     position:relative;
@@ -62,16 +66,27 @@ section{
     background-color: var(--white);
     box-shadow: #eeefff 0px -5px 5px;
 }
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 section img{
     max-width: calc(375px - 4rem);
 }
 .hero{
+    box-shadow: none;
     background-color: var(--Very-Pale-Cyan);
     text-align: center;
     padding: 2.5rem;
     display: flex;
     gap: 2.5rem;
     background-image: url('images/bg-hero-mobile.svg');
+}
+.hero--content{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 .hero h1{
     font-family: 'Poppins';
@@ -89,6 +104,17 @@ section img{
     padding-right: 3rem;
     padding-top: .75rem;
     padding-bottom: .75rem;
+    cursor: pointer;
+}
+.hero--btn:hover{
+    color: var(--Pink);
+    background-color: var(--white);
+    box-shadow: var(--Pink) 0 0 5px;
+}
+.btn--call:hover{
+    color: var(--Pink);
+    background-color: var(--white);
+    box-shadow: var(--Pink) 0 0 5px;
 }
 footer{
     background-color: var(--Very-Dark-Cyan);
@@ -149,4 +175,69 @@ footer .copyright{
     transform: translateY(4rem);
     max-width: calc(350px - 2rem);
     font-size: x-small;
+}
+@media (min-width: 640px) {
+    header{
+        padding: 2.5rem;
+    }
+    main{
+        gap:2rem
+    }
+    .hero{
+        flex-direction: row;
+        align-items: center;
+    }
+    .hero--content{
+        text-align: left;
+    }
+    .hero img{
+        max-width: 600px;
+    }
+    .grow-together,
+    .your-users{
+        flex-direction: row-reverse;
+    }
+    .flowing-conversation{
+        flex-direction: row;
+    }
+    section:not(.hero,.get-started) {
+        margin: 3rem;
+        text-align: left;
+        padding-left: 5rem;
+        align-items: center;
+    }
+    section img{
+        max-width: 500px ;
+    }
+    .get-started{
+        min-width: 500px;
+        font-size: small;
+        box-shadow: #eeefff 0 -5px 3px;
+    }
+    footer{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 9rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .links{
+        flex-direction: row;
+        gap: 5rem;
+    }
+    .link-lists{
+        display: flex;
+        gap: 5rem;
+    }
+    .contact{
+        max-width: 400px;
+    }
+    .fa-brands{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer--logo{
+        width:100%;
+    }
 }
